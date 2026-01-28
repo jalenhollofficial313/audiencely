@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiencely - AI-Powered Social Media Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">Audiencely</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">Sign in</a>
+                    <a href="#" class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">Get started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-3xl p-12 lg:p-16">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Content -->
+                    <div>
+                        <div class="mb-6">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white text-gray-700 border border-gray-200">
+                                Built for solo founders
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        
+                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            Post to the right people, the right way, at the right time
+                        </h1>
+                        
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            Identify your real audience, validate you're targeting the right people, and create content they actually want to see
+                        </p>
+                        
+                        <form id="hero-email-form" class="mb-4">
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <input 
+                                    type="email" 
+                                    id="hero-email-input"
+                                    placeholder="Enter your email" 
+                                    required
+                                    class="flex-1 px-4 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-base"
+                                >
+                                <button 
+                                    type="submit" 
+                                    id="hero-submit-btn"
+                                    class="bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
+                                >
+                                    Get early access
+                                </button>
+                            </div>
+                            <p id="hero-form-message" class="text-sm mt-2 hidden"></p>
+                        </form>
+                        
+                        <p class="text-sm text-gray-500">Join 50+ founders on the waitlist</p>
+                    </div>
+
+                    <!-- Right Column: Analytics Dashboard Mockup -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+                        <!-- Dashboard Header -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Platform Performance</h3>
+                            
+                            <!-- Platform Comparison Cards -->
+                            <div class="grid grid-cols-3 gap-3 mb-6">
+                                <div class="bg-blue-50 rounded-lg p-3 border border-blue-100">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                        <span class="text-xs font-medium text-gray-700">Twitter</span>
+                                    </div>
+                                    <div class="text-xl font-bold text-gray-900">2.4K</div>
+                                    <div class="text-xs text-green-600">+12%</div>
+                                </div>
+                                
+                                <div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                                        <span class="text-xs font-medium text-gray-700">LinkedIn</span>
+                                    </div>
+                                    <div class="text-xl font-bold text-gray-900">1.8K</div>
+                                    <div class="text-xs text-green-600">+8%</div>
+                                </div>
+                                
+                                <div class="bg-orange-50 rounded-lg p-3 border border-orange-100">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                        <span class="text-xs font-medium text-gray-700">Reddit</span>
+                                    </div>
+                                    <div class="text-xl font-bold text-gray-900">892</div>
+                                    <div class="text-xs text-green-600">+15%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Graph -->
+                        <div class="mb-6">
+                            <h4 class="text-sm font-medium text-gray-700 mb-3">Engagement Over Time</h4>
+                            <div class="h-32 flex items-end justify-between gap-1">
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 45%"></div>
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 60%"></div>
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 55%"></div>
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 70%"></div>
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 65%"></div>
+                                <div class="flex-1 bg-blue-200 rounded-t" style="height: 80%"></div>
+                                <div class="flex-1 bg-blue-300 rounded-t" style="height: 85%"></div>
+                                <div class="flex-1 bg-blue-400 rounded-t" style="height: 100%"></div>
+                            </div>
+                            <div class="flex justify-between mt-2">
+                                <span class="text-xs text-gray-500">Mon</span>
+                                <span class="text-xs text-gray-500">Tue</span>
+                                <span class="text-xs text-gray-500">Wed</span>
+                                <span class="text-xs text-gray-500">Thu</span>
+                                <span class="text-xs text-gray-500">Fri</span>
+                                <span class="text-xs text-gray-500">Sat</span>
+                                <span class="text-xs text-gray-500">Sun</span>
+                                <span class="text-xs text-gray-500">Today</span>
+                            </div>
+                        </div>
+
+                        <!-- Top Posts -->
+                        <div>
+                            <h4 class="text-sm font-medium text-gray-700 mb-3">Top Performing Posts</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between bg-gray-50 rounded-lg p-2 border border-gray-100">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                                        <span class="text-xs text-gray-700 truncate">How to validate your SaaS idea...</span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-900">847</span>
+                                </div>
+                                <div class="flex items-center justify-between bg-gray-50 rounded-lg p-2 border border-gray-100">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
+                                        <span class="text-xs text-gray-700 truncate">5 mistakes solo founders make...</span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-900">623</span>
+                                </div>
+                                <div class="flex items-center justify-between bg-gray-50 rounded-lg p-2 border border-gray-100">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                                        <span class="text-xs text-gray-700 truncate">Tools I use to run my startup...</span>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-900">512</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works - Overview Cards -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-bold text-gray-900 mb-16">
+                See how we solve the problems<br>solo founders face daily
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: AI Identifies Audience -->
+                <a href="#audience" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow block">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-orange-50 rounded-xl flex items-center justify-center border border-orange-100">
+                            <svg class="w-10 h-10 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        AI identifies your audience
+                    </h3>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Stop posting to the wrong people. Our AI identifies your real audience based on who actually engages and converts.
+                    </p>
+                    
+                    <span class="inline-flex items-center text-sm font-medium text-gray-900">
+                        See audience insights
+                        <svg class="ml-2 w-5 h-5 bg-gray-900 text-white rounded-full p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Card 2: Create Content -->
+                <a href="#create" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow block">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-red-50 rounded-xl flex items-center justify-center border border-red-100">
+                            <svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Create content in one place
+                    </h3>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        No more bouncing between 5-7 tools. AI analyzes top-performing content and helps you create in one unified workspace.
+                    </p>
+                    
+                    <span class="inline-flex items-center text-sm font-medium text-gray-900">
+                        See unified workspace
+                        <svg class="ml-2 w-5 h-5 bg-gray-900 text-white rounded-full p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Card 3: Schedule & Automate -->
+                <a href="#schedule" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow block">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center border border-blue-100">
+                            <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Schedule and automate
+                    </h3>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Set it and forget it. Schedule content across all platforms and let automation handle distribution at optimal times.
+                    </p>
+                    
+                    <span class="inline-flex items-center text-sm font-medium text-gray-900">
+                        See scheduling
+                        <svg class="ml-2 w-5 h-5 bg-gray-900 text-white rounded-full p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Card 4: Track Conversions -->
+                <a href="#track" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow block">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-purple-50 rounded-xl flex items-center justify-center border border-purple-100">
+                            <svg class="w-10 h-10 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        Track what converts
+                    </h3>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Know exactly what drives signups. See side-by-side analytics showing clear correlations between engagement and conversions.
+                    </p>
+                    
+                    <span class="inline-flex items-center text-sm font-medium text-gray-900">
+                        See analytics
+                        <svg class="ml-2 w-5 h-5 bg-gray-900 text-white rounded-full p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Section 1: Audience -->
+    <section id="audience" class="bg-gray-50 py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-900">Audience Intelligence</span>
+                    </div>
+                    
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Stop guessing who your audience is
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Most founders waste months posting to the wrong people. Our AI analyzes engagement patterns and conversion data to identify your real audience automatically.
+                    </p>
+                    
+                    <a href="#" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors mb-8">
+                        Get started
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    
+                    <div class="space-y-4">
+                        <div class="text-sm text-gray-900 font-medium">See also</div>
+                        <a href="#create" class="block text-indigo-600 hover:text-indigo-700">Content creation with AI</a>
+                        <a href="#track" class="block text-indigo-600 hover:text-indigo-700">Conversion tracking</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-6">Your Audience Profile</h4>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-orange-500 pl-4">
+                            <div class="text-sm text-gray-600 mb-1">Primary Segment</div>
+                            <div class="text-xl font-bold text-gray-900">Solo SaaS Founders</div>
+                            <div class="text-sm text-gray-600 mt-2">Age 28-42, Tech-savvy, Revenue $0-50K MRR</div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="text-sm text-gray-600 mb-1">Engagement Rate</div>
+                                <div class="text-2xl font-bold text-gray-900">8.4%</div>
+                                <div class="text-xs text-green-600 mt-1">↑ 3.2% vs average</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <div class="text-sm text-gray-600 mb-1">Conversion Rate</div>
+                                <div class="text-2xl font-bold text-gray-900">4.2%</div>
+                                <div class="text-xs text-green-600 mt-1">↑ 1.8% vs average</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="text-sm font-medium text-gray-900 mb-3">Platform Breakdown</div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-20 text-xs text-gray-600">Twitter</div>
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: 68%"></div>
+                                    </div>
+                                    <div class="text-sm font-medium text-gray-900">68%</div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-20 text-xs text-gray-600">LinkedIn</div>
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-indigo-500 h-2 rounded-full" style="width: 24%"></div>
+                                    </div>
+                                    <div class="text-sm font-medium text-gray-900">24%</div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-20 text-xs text-gray-600">Reddit</div>
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-orange-500 h-2 rounded-full" style="width: 8%"></div>
+                                    </div>
+                                    <div class="text-sm font-medium text-gray-900">8%</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-4 border border-orange-100">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 text-sm mb-1">AI Insight</div>
+                                    <div class="text-sm text-gray-700">Your audience engages 3x more with "how-to" content posted on Tuesday mornings.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Section 2: Create -->
+    <section id="create" class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-gray-50 rounded-2xl shadow-2xl p-8 border border-gray-200">
+                        <div class="bg-white rounded-xl p-6 mb-6 border border-gray-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold text-gray-900">New Post</h4>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-medium">Twitter</button>
+                                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">LinkedIn</button>
+                                    <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">Reddit</button>
+                                </div>
+                            </div>
+                            
+                            <textarea class="w-full bg-gray-50 rounded-lg p-4 text-gray-700 text-sm mb-3 border border-gray-200 resize-none" rows="4">Just launched our new AI-powered content analysis feature. It automatically identifies patterns in your top-performing posts and suggests what to create next.</textarea>
+                            
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-gray-600">245/280 characters</span>
+                                <span class="text-green-600 font-medium">Engagement score: 8.7/10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4 border border-blue-100 mb-6">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 text-sm mb-1">AI Suggestions</div>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Add a question to boost replies (+2.3% engagement)</li>
+                                        <li>• Include a concrete number or metric</li>
+                                        <li>• Best posting time: Today at 2:30 PM</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-indigo-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
+                                Post now
+                            </button>
+                            <button class="px-4 py-3 bg-white text-gray-700 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors">
+                                Schedule
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-red-400 to-red-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-900">Unified Content Creation</span>
+                    </div>
+                    
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Write once, publish everywhere
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Stop wasting hours switching between tools and researching what works. Create content in one place with AI suggestions based on your top-performing posts.
+                    </p>
+                    
+                    <a href="#" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors mb-8">
+                        Start creating
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    
+                    <div class="space-y-4">
+                        <div class="text-sm text-gray-900 font-medium">See also</div>
+                        <a href="#schedule" class="block text-indigo-600 hover:text-indigo-700">Scheduling and automation</a>
+                        <a href="#audience" class="block text-indigo-600 hover:text-indigo-700">Audience identification</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Section 3: Schedule -->
+    <section id="schedule" class="bg-gray-50 py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-900">Smart Scheduling</span>
+                    </div>
+                    
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Schedule once, distribute everywhere
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Plan your content calendar across all platforms in one view. AI recommends optimal posting times based on your audience's activity patterns.
+                    </p>
+                    
+                    <a href="#" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors mb-8">
+                        See scheduling
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    
+                    <div class="space-y-4">
+                        <div class="text-sm text-gray-900 font-medium">See also</div>
+                        <a href="#create" class="block text-indigo-600 hover:text-indigo-700">Content creation</a>
+                        <a href="#track" class="block text-indigo-600 hover:text-indigo-700">Performance tracking</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                    <div class="flex items-center justify-between mb-6">
+                        <h4 class="text-lg font-semibold text-gray-900">Content Calendar</h4>
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 bg-gray-200 text-gray-700 rounded text-xs hover:bg-gray-300">Week</button>
+                            <button class="px-3 py-1 bg-indigo-600 text-white rounded text-xs">Month</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="grid grid-cols-7 gap-2 mb-2">
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Mon</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Tue</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Wed</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Thu</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Fri</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Sat</div>
+                            <div class="text-center text-xs font-medium text-gray-600 py-2">Sun</div>
+                        </div>
+                        
+                        <div class="grid grid-cols-7 gap-2">
+                            <div class="bg-gray-50 border border-gray-200 rounded-lg p-2 h-24"></div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24 relative">
+                                <div class="text-xs text-gray-900 font-medium mb-2">14</div>
+                                <div class="space-y-1">
+                                    <div class="h-1.5 bg-blue-200 rounded"></div>
+                                    <div class="h-1.5 bg-indigo-200 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24">
+                                <div class="text-xs text-gray-900 font-medium mb-2">15</div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24 relative">
+                                <div class="text-xs text-gray-900 font-medium mb-2">16</div>
+                                <div class="space-y-1">
+                                    <div class="h-1.5 bg-blue-200 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24 relative">
+                                <div class="text-xs text-gray-900 font-medium mb-2">17</div>
+                                <div class="space-y-1">
+                                    <div class="h-1.5 bg-blue-200 rounded"></div>
+                                    <div class="h-1.5 bg-indigo-200 rounded"></div>
+                                    <div class="h-1.5 bg-orange-200 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24">
+                                <div class="text-xs text-gray-900 font-medium mb-2">18</div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-2 h-24">
+                                <div class="text-xs text-gray-900 font-medium mb-2">19</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                    <span class="text-sm font-medium text-gray-900">Tuesday, 2:30 PM</span>
+                                </div>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium">Twitter</span>
+                            </div>
+                            <p class="text-xs text-gray-600">How to validate your SaaS idea in 48 hours...</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-3 border border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                                    <span class="text-sm font-medium text-gray-900">Friday, 9:00 AM</span>
+                                </div>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs font-medium">LinkedIn</span>
+                            </div>
+                            <p class="text-xs text-gray-600">5 lessons from reaching $10K MRR as a solo founder...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-blue-50 rounded-lg p-4 border border-blue-100">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900 text-sm mb-1">Optimal Time Detected</div>
+                                <div class="text-sm text-gray-700">Post on Tuesday at 2:30 PM for 35% higher engagement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Section 4: Track -->
+    <section id="track" class="bg-white py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-gray-50 rounded-2xl shadow-2xl p-8 border border-gray-200">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-6">Conversion Dashboard</h4>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <div class="text-sm text-gray-600 mb-1">Total Signups</div>
+                                <div class="text-3xl font-bold text-gray-900">189</div>
+                                <div class="text-xs text-green-600 mt-1">↑ 23% this week</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <div class="text-sm text-gray-600 mb-1">Conversion Rate</div>
+                                <div class="text-3xl font-bold text-gray-900">4.2%</div>
+                                <div class="text-xs text-green-600 mt-1">↑ 1.1% vs last week</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h5 class="text-sm font-semibold text-gray-900 mb-3">Top Converting Content</h5>
+                            <div class="space-y-3">
+                                <div class="bg-white rounded-lg p-3 border border-gray-200">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-gray-900 mb-1">Thread: "5 mistakes solo founders make"</p>
+                                            <div class="flex items-center gap-2">
+                                                <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">Twitter</span>
+                                                <span class="text-xs text-gray-600">Posted 2 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs text-gray-600">Engagement: 847</div>
+                                        <div class="text-sm font-bold text-green-600">23 signups</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-3 border border-gray-200">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-gray-900 mb-1">Post: "How I validated my SaaS idea in 48h"</p>
+                                            <div class="flex items-center gap-2">
+                                                <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">Twitter</span>
+                                                <span class="text-xs text-gray-600">Posted 4 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs text-gray-600">Engagement: 623</div>
+                                        <div class="text-sm font-bold text-green-600">14 signups</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white rounded-lg p-3 border border-gray-200">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-gray-900 mb-1">Article: "The tools I use to run my startup"</p>
+                                            <div class="flex items-center gap-2">
+                                                <span class="px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded text-xs">LinkedIn</span>
+                                                <span class="text-xs text-gray-600">Posted 1 week ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="text-xs text-gray-600">Engagement: 412</div>
+                                        <div class="text-sm font-bold text-green-600">11 signups</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-purple-50 rounded-lg p-4 border border-purple-100">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-900 text-sm mb-1">Pattern Identified</div>
+                                    <div class="text-sm text-gray-700">"How-to" threads convert 3.2x better than other content types</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-900">Conversion Analytics</span>
+                    </div>
+                    
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Know exactly what drives signups
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Stop guessing which content converts. See clear correlations between your posts and signups, then identify winning patterns to double down on what works.
+                    </p>
+                    
+                    <a href="#" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors mb-8">
+                        View analytics
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    
+                    <div class="space-y-4">
+                        <div class="text-sm text-gray-900 font-medium">See also</div>
+                        <a href="#audience" class="block text-indigo-600 hover:text-indigo-700">Audience identification</a>
+                        <a href="#create" class="block text-indigo-600 hover:text-indigo-700">AI-powered content creation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Scroll Section - How It Works -->
+    <section class="bg-white py-32">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How it works</h2>
+                <p class="text-xl text-gray-600">Four simple steps from audience discovery to conversion tracking</p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="scroll-section mb-32 opacity-0 translate-y-8 transition-all duration-700">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                    <h3 class="text-3xl font-bold text-gray-900">AI identifies your audience</h3>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Audience Insights Dashboard</h4>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <div class="text-sm text-gray-600 mb-2">Primary Audience</div>
+                                <div class="text-xl font-bold text-gray-900">Solo Founders</div>
+                                <div class="text-xs text-green-600 mt-1">92% match</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <div class="text-sm text-gray-600 mb-2">Engagement Rate</div>
+                                <div class="text-xl font-bold text-gray-900">8.4%</div>
+                                <div class="text-xs text-green-600 mt-1">+3.2% vs avg</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 border border-gray-200">
+                                <div class="text-sm text-gray-600 mb-2">Best Platform</div>
+                                <div class="text-xl font-bold text-gray-900">Twitter</div>
+                                <div class="text-xs text-gray-500 mt-1">LinkedIn 2nd</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Our AI analyzes who engages with your content and converts, then identifies patterns to help you target the right people.</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="scroll-section mb-32 opacity-0 translate-y-8 transition-all duration-700">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                    <h3 class="text-3xl font-bold text-gray-900">Create content in one place</h3>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <div class="bg-white rounded-lg p-6 border border-gray-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Content Editor</h4>
+                                <div class="flex gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Twitter</span>
+                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">LinkedIn</span>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 rounded p-4 mb-4">
+                                <p class="text-gray-700 mb-2">Just shipped a new feature that solo founders asked for...</p>
+                                <div class="text-xs text-gray-500">AI suggestion: Add a compelling question to boost engagement</div>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Characters: 67/280</span>
+                                <span class="text-green-600">Engagement score: 8.5/10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Write once, publish everywhere. AI analyzes top-performing content and suggests improvements in real-time.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="scroll-section mb-32 opacity-0 translate-y-8 transition-all duration-700">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                    <h3 class="text-3xl font-bold text-gray-900">Schedule and automate distribution</h3>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Content Calendar</h4>
+                        <div class="grid grid-cols-7 gap-2">
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Mon</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Tue</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Wed</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Thu</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Fri</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Sat</div>
+                            <div class="text-center text-xs font-medium text-gray-600 pb-2">Sun</div>
+                            <div class="bg-white border border-gray-200 rounded p-2 h-16"></div>
+                            <div class="bg-blue-50 border border-blue-200 rounded p-2 h-16 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded p-2 h-16"></div>
+                            <div class="bg-blue-50 border border-blue-200 rounded p-2 h-16 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-200 rounded p-2 h-16 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded p-2 h-16"></div>
+                            <div class="bg-white border border-gray-200 rounded p-2 h-16"></div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Schedule posts across all platforms for optimal engagement times. Set it once and let automation handle the rest.</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="scroll-section mb-0 opacity-0 translate-y-8 transition-all duration-700">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                    <h3 class="text-3xl font-bold text-gray-900">Track what converts</h3>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">Conversion Analytics</h4>
+                        <div class="bg-white rounded-lg p-4 border border-gray-200">
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <div class="text-sm text-gray-600">This Week's Signups</div>
+                                    <div class="text-3xl font-bold text-gray-900">47</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-sm text-gray-600">Top Source</div>
+                                    <div class="text-lg font-semibold text-gray-900">Twitter thread</div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Thread: "5 mistakes solo founders make"</span>
+                                    <span class="font-medium text-gray-900">23 signups</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Post: "How I validated my SaaS idea"</span>
+                                    <span class="font-medium text-gray-900">14 signups</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">See exactly which content drives signups. Identify winning patterns and double down on what works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-gray-50 py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
+                <p class="text-xl text-gray-600">Get started for free. Upgrade for more credits and extra features.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Free</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-5xl font-bold text-gray-900">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-sm font-medium text-gray-900 mb-4">What's included:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">15 credits per month</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Basic audience insights</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">AI content suggestions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Schedule posts</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="w-full bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                        Get started
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-gray-900 relative">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Pro</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-5xl font-bold text-gray-900">$25</span>
+                            <span class="text-gray-600 ml-2">per month</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-sm font-medium text-gray-900 mb-4">All features in Free, plus:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">100 credits per month</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Advanced analytics</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Conversion tracking</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Unused credits roll over</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Purchase additional credits anytime</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                        Get started
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Pro+ Plan -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Pro+</h3>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-5xl font-bold text-gray-900">$60</span>
+                            <span class="text-gray-600 ml-2">per month</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-sm font-medium text-gray-900 mb-4">Everything in Pro, plus:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">300 credits per month</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">20% off additional credit purchases</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Priority support</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">White-label reports</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">API access</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                        Get started
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-16">Frequently asked questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-200">
+                    <button class="faq-question w-full py-6 flex items-center justify-between text-left hover:text-gray-600 transition-colors" data-faq="1">
+                        <span class="text-lg text-gray-900 font-normal">How does the credit system work?</span>
+                        <svg class="faq-icon w-6 h-6 text-gray-900 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden pb-6">
+                        <p class="text-gray-600">Each credit represents one scheduled post to one platform. For example, posting the same content to Twitter, LinkedIn, and Instagram would use 3 credits. Credits are deducted when posts are scheduled, and unused credits roll over if you're on a paid plan.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-200">
+                    <button class="faq-question w-full py-6 flex items-center justify-between text-left hover:text-gray-600 transition-colors" data-faq="2">
+                        <span class="text-lg text-gray-900 font-normal">What platforms can I connect?</span>
+                        <svg class="faq-icon w-6 h-6 text-gray-900 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden pb-6">
+                        <p class="text-gray-600">We support all major social media platforms including Twitter/X, LinkedIn, Instagram, Facebook, TikTok, and YouTube. The free plan allows 2 connected platforms, while paid plans offer unlimited connections.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-200">
+                    <button class="faq-question w-full py-6 flex items-center justify-between text-left hover:text-gray-600 transition-colors" data-faq="3">
+                        <span class="text-lg text-gray-900 font-normal">Can I cancel anytime?</span>
+                        <svg class="faq-icon w-6 h-6 text-gray-900 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden pb-6">
+                        <p class="text-gray-600">Yes, absolutely. You can cancel your subscription at any time from your account settings. You'll continue to have access to your paid features until the end of your current billing period, and any unused credits will remain available.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-gray-200">
+                    <button class="faq-question w-full py-6 flex items-center justify-between text-left hover:text-gray-600 transition-colors" data-faq="4">
+                        <span class="text-lg text-gray-900 font-normal">Do unused credits roll over?</span>
+                        <svg class="faq-icon w-6 h-6 text-gray-900 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden pb-6">
+                        <p class="text-gray-600">Yes, on Pro and Pro+ plans, unused credits automatically roll over to the next month. Free plan credits expire at the end of each month. There's no limit to how many credits you can accumulate on paid plans.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border-b border-gray-200">
+                    <button class="faq-question w-full py-6 flex items-center justify-between text-left hover:text-gray-600 transition-colors" data-faq="5">
+                        <span class="text-lg text-gray-900 font-normal">What counts as one credit?</span>
+                        <svg class="faq-icon w-6 h-6 text-gray-900 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden pb-6">
+                        <p class="text-gray-600">One credit equals one post to one platform. This includes the AI content generation, scheduling, and analytics. If you schedule the same post across 3 platforms, it uses 3 credits. Editing or rescheduling a post doesn't consume additional credits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gray-50 py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl font-bold text-gray-900 mb-8">Grow your audience with<br>less effort</h2>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors inline-flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                Get started today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <!-- Brand Column -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Audiencely</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2">Made with ❤️</p>
+                    <p class="text-sm text-gray-600 mb-4">© 2025 Audiencely</p>
+                    <p class="text-sm text-gray-600 mb-4">hello@audiencely.com</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#pricing" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Demo</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community Column -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Community</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Contributors</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Affiliate program</a></li>
+                    </ul>
+                </div>
+
+                <!-- Account Column -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Account</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Sign in</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Sign up</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Privacy policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Terms of service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
