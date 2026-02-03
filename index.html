@@ -71,7 +71,7 @@
                             <p id="hero-form-message" class="text-sm mt-2 hidden"></p>
                         </form>
                         
-                        <p class="text-sm text-gray-500">Join 50+ founders on the waitlist</p>
+                        <p class="text-sm text-gray-500">Join <span id="signup-count">0</span> founders on the waitlist</p>
                     </div>
 
                     <!-- Right Column: Analytics Dashboard Mockup -->
@@ -878,173 +878,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="bg-gray-50 py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
-                <p class="text-xl text-gray-600">Get started for free. Upgrade for more credits and extra features.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Free Plan -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200">
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Free</h3>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-5xl font-bold text-gray-900">$0</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <p class="text-sm font-medium text-gray-900 mb-4">What's included:</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">15 credits per month</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Basic audience insights</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">AI content suggestions</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Schedule posts</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button class="w-full bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-                        Get started
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Pro Plan -->
-                <div class="bg-white rounded-2xl p-8 border-2 border-gray-900 relative">
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Pro</h3>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-5xl font-bold text-gray-900">$25</span>
-                            <span class="text-gray-600 ml-2">per month</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <p class="text-sm font-medium text-gray-900 mb-4">All features in Free, plus:</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">100 credits per month</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Advanced analytics</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Conversion tracking</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Unused credits roll over</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Purchase additional credits anytime</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                        Get started
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Pro+ Plan -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200">
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Pro+</h3>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-5xl font-bold text-gray-900">$60</span>
-                            <span class="text-gray-600 ml-2">per month</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <p class="text-sm font-medium text-gray-900 mb-4">Everything in Pro, plus:</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">300 credits per month</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">20% off additional credit purchases</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">Priority support</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">White-label reports</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-gray-700">API access</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button class="w-full bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                        Get started
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="bg-white py-32">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1167,7 +1000,6 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-900 mb-4">Resources</h3>
                     <ul class="space-y-3">
-                        <li><a href="#pricing" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Pricing</a></li>
                         <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Demo</a></li>
                         <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Blog</a></li>
                     </ul>

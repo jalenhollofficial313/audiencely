@@ -80,6 +80,53 @@ function initFAQ() {
     });
 }
 
+const FIREBASE_DB_URL = 'https://audiencely-default-rtdb.firebaseio.com';
+
+async function fetchSignupCount() {
+    const response = await fetch(`${FIREBASE_DB_URL}/signups.json`);
+    if (!response.ok) {
+        throw new Error('Failed to load signups');
+    }
+    const data = await response.json();
+    if (!data) {
+        return 0;
+    }
+    return Object.keys(data).length;
+}
+
+async function createSignup(email) {
+    const response = await fetch(`${FIREBASE_DB_URL}/signups.json`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email,
+            createdAt: new Date().toISOString(),
+            source: 'landing',
+        }),
+    });
+
+    if (!response.ok) {
+        throw new Error('Failed to save signup');
+    }
+
+    return response.json();
+}
+
+async function updateSignupCount() {
+    const countEl = document.getElementById('signup-count');
+    if (!countEl) {
+        return;
+    }
+    try {
+        const count = await fetchSignupCount();
+        countEl.textContent = count.toString();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 // Email capture functionality
 function initEmailCapture() {
     const form = document.getElementById('hero-email-form');
@@ -99,24 +146,12 @@ function initEmailCapture() {
             message.classList.add('hidden');
             
             try {
-                const response = await fetch('https://aicofounder.com/api/website/1a132503-7875-4923-8bac-4edabf7bc00f/capture-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email })
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    message.textContent = 'Thanks! Check your email for next steps.';
-                    message.classList.remove('hidden', 'text-red-600');
-                    message.classList.add('text-green-600');
-                    emailInput.value = '';
-                } else {
-                    throw new Error(data.message || 'Something went wrong');
-                }
+                await createSignup(email);
+                message.textContent = 'Thanks! You are on the waitlist.';
+                message.classList.remove('hidden', 'text-red-600');
+                message.classList.add('text-green-600');
+                emailInput.value = '';
+                await updateSignupCount();
             } catch (error) {
                 message.textContent = error.message || 'Failed to submit. Please try again.';
                 message.classList.remove('hidden', 'text-green-600');
@@ -135,4 +170,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initFAQ();
     initEmailCapture();
+    updateSignupCount();
 });
